@@ -90,9 +90,10 @@ position: absolute;
     font-weight: 649;
     color: #373737;
     font-size: medium;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
+
 
 /* For both text-lines  */
 .Typewriter > div {
@@ -103,6 +104,7 @@ position: absolute;
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .1em;
+    color: black;
 }
 
 /* first line */
@@ -188,3 +190,43 @@ position: absolute;
     from, to { border-color: transparent }
     50% { border-color: #ffce44; }
 }
+
+
+.sos button{
+    position: relative;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    font-size: 2rem;
+    background-color: red;
+    color: white;
+    /* margin-left: 80rem; */
+    cursor: pointer;
+
+  }
+
+  .sos button:hover{
+    background-color:darkred;
+  }
+
+@media only screen and (max-width: 600px) {
+    
+    .Notes-Head{
+        position: absolute;
+        margin-bottom: 35rem;
+    }
+    .Typewriter > div{
+        margin-top: 17rem;
+        /* position: absolute;
+        width:100%; */
+        font-size: 1.2rem;
+        /* color: white; */
+    }
+    .Google-Btn{
+        position: absolute;
+        margin-top: 45rem;
+    }
+    
+  }
+
+
