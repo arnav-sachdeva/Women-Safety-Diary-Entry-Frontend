@@ -11,7 +11,7 @@ export default function Textbox(props){
 
     // To add a note
     function submitNote(googleId,title,description){
-        fetch("http://localhost:5000/notes/add",
+        fetch("https://sea-turtle-app-52yvl.ondigitalocean.app/notes/add",
         {
             method: "POST",
             headers: {
