@@ -16,7 +16,7 @@ function App() {
 
   useEffect(()=>{
     setIsLoading(true)
-    fetch("https://sea-turtle-app-52yvl.ondigitalocean.app/auth/login/success",
+    fetch("http://localhost:5000/auth/login/success",
       {
         method: "GET",
         credentials: "include",
