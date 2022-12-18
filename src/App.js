@@ -30,12 +30,14 @@ function App() {
       .then(response => {
         if (response.success === false) {
           // response.success is false when user has not signed in
+          console.log("resp.suc " + response.success);
           return false
         }
         else if (response.status === 200) return response.json();
         throw new Error("failed to authenticate user");
       })
       .then(responseJson => {
+        console.log("resp.json " + responseJson);
         if(responseJson.success===false){
           setIsSignedIn(false)
           setIsLoading(false)
@@ -60,7 +62,7 @@ function App() {
   // props are the arguments which will be sent to the children components
   const props = {
     user: user,
-    isSignedIn: true,
+    isSignedIn: isSignedIn,
     isLoading: isLoading
   }
 
