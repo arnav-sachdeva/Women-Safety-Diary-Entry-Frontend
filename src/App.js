@@ -37,7 +37,7 @@ function App() {
         throw new Error("failed to authenticate user");
       })
       .then(responseJson => {
-        console.log("resp.json " + responseJson);
+        console.log("resp.json " + responseJson.success);
         if(responseJson.success===false){
           setIsSignedIn(false)
           setIsLoading(false)
