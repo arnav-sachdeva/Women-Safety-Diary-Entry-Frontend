@@ -28,6 +28,7 @@ function App() {
         }
       })
       .then(response => {
+        console.log(response);
         if (response.success === false) {
          
           console.log("resp.suc " + response.success);
