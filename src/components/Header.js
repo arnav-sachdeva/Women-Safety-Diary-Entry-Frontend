@@ -14,7 +14,7 @@ export default function(props){
                 <img className='UserImage' src={props.user.picture} alt='User'/>
                 <div className='DropdownContent'>
                     <div className='Username'>{props.user.name}</div>
-                    <a href="https://sea-turtle-app-52yvl.ondigitalocean.app/notes/auth/logout">Logout</a>
+                    <a href="https://sea-turtle-app-52yvl.ondigitalocean.app/auth/logout">Logout</a>
                 </div>
             </div>
             <div className='Header-Flex'>
@@ -25,7 +25,7 @@ export default function(props){
     ) :
     (
         <div className="Header">
-            <div className='SignIn-Button' onClick={()=>window.location.href='https://sea-turtle-app-52yvl.ondigitalocean.app/notes/auth/google'}>Sign In</div>
+            <div className='SignIn-Button' onClick={()=>window.location.href='https://sea-turtle-app-52yvl.ondigitalocean.app/auth/google'}>Sign In</div>
             <div className='Header-Flex'>
                 <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt='Notes-Logo'/>
                 <div className='Heading'>SafeHer</div>
