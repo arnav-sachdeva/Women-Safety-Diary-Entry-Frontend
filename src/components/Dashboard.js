@@ -28,7 +28,7 @@ export default function Dashboard(props){
        
        
        
-        fetch("http://sea-turtle-app-52yvl.ondigitalocean.app/notes/sos",
+        fetch("http://sea-turtle-app-52yvl.ondigitalocean.app/sos",
         {
             method: "POST",
             headers: {
