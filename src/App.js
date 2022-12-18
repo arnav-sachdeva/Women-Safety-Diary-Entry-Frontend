@@ -37,17 +37,17 @@ function App() {
         throw new Error("failed to authenticate user");
       })
       .then(responseJson => {
-        console.log("resp.json " + responseJson.success);
-        if(responseJson.success===false){
-          setIsSignedIn(false)
-          setIsLoading(false)
-        }
-        else{
+        console.log("resp.json " + responseJson);
+        // if(responseJson.success===false){
+        //   setIsSignedIn(false)
+        //   setIsLoading(false)
+        // }
+        // else{
           // set the user's received info inside the 'user' object
           setUser(responseJson.user)
           setIsSignedIn(true)
           setIsLoading(false)
-        }
+        // }
         
       })
       .catch(err => {
