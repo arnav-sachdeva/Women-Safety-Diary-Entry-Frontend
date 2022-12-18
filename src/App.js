@@ -28,13 +28,14 @@ function App() {
         }
       })
       .then(response => {
-        if (response.success === false) {
-          // response.success is false when user has not signed in
-          console.log("resp.suc " + response.success);
-          return false
-        }
-        else if (response.status === 200) return response.json();
-        throw new Error("failed to authenticate user");
+        // if (response.success === false) {
+         
+        //   console.log("resp.suc " + response.success);
+        //   return false
+        // }
+        // else if (response.status === 200) return response.json();
+        // throw new Error("failed to authenticate user");
+        return response.json();
       })
       .then(responseJson => {
         console.log("resp.json " + responseJson.user);
