@@ -28,27 +28,27 @@ function App() {
         }
       })
       .then(response => {
-        // if (response.success === false) {
+        if (response.success === false) {
          
-        //   console.log("resp.suc " + response.success);
-        //   return false
-        // }
-        // else if (response.status === 200) return response.json();
-        // throw new Error("failed to authenticate user");
-        return response.json();
+          console.log("resp.suc " + response.success);
+          return false
+        }
+        else if (response.status === 200) return response.json();
+        throw new Error("failed to authenticate user");
+  
       })
       .then(responseJson => {
-        console.log("resp.json " + responseJson.user);
-        // if(responseJson.success===false){
-        //   setIsSignedIn(false)
-        //   setIsLoading(false)
-        // }
-        // else{
+        console.log("resp.json " + responseJson.success);
+        if(responseJson.success===false){
+          setIsSignedIn(false)
+          setIsLoading(false)
+        }
+        else{
           // set the user's received info inside the 'user' object
           setUser(responseJson.user)
           setIsSignedIn(true)
           setIsLoading(false)
-        // }
+        }
         
       })
       .catch(err => {
