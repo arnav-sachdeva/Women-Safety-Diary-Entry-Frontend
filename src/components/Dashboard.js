@@ -74,7 +74,7 @@ export default function Dashboard(props){
                 <div>The simplest way to keep you safe</div>
                 {/* <div></div> */}
             </div>
-            <div className="Google-Btn" onClick={()=>window.location.href='http://sea-turtle-app-52yvl.ondigitalocean.app/auth/google'}>
+            <div className="Google-Btn" onClick={()=>window.location.href='https://sea-turtle-app-52yvl.ondigitalocean.app/auth/google'}>
                 <img className="Google-Icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='google'/>
                 <div className="Btn-Text">Sign in with Google</div>
             </div>
