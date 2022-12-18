@@ -60,7 +60,7 @@ export default function Dashboard(props){
         </div>
     )
     // When not signed in, show an option to sign in with google
-    else if (props.isSignedIn===false) return (
+    else if (props.isSignedIn===true) return (
         <div className='NotSignedInDashboard'>
             <img className="bg-img" src={img1} alt="img"></img>
             <div className='Notes-Head'>
