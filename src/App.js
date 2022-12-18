@@ -60,7 +60,7 @@ function App() {
   // props are the arguments which will be sent to the children components
   const props = {
     user: user,
-    isSignedIn: isSignedIn,
+    isSignedIn: true,
     isLoading: isLoading
   }
 
