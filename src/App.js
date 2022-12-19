@@ -16,7 +16,7 @@ function App() {
 
   useEffect(()=>{
     setIsLoading(true)
-    fetch("https://sea-turtle-app-52yvl.ondigitalocean.app/auth/login/success",
+    fetch("http://localhost:5000/auth/login/success",
       {
         method: "GET",
         credentials: "include",
@@ -28,18 +28,15 @@ function App() {
         }
       })
       .then(response => {
-        console.log(response);
         if (response.success === false) {
-         
-          console.log("resp.suc " + response.success);
+          // response.success is false when user has not signed in
           return false
         }
         else if (response.status === 200) return response.json();
         throw new Error("failed to authenticate user");
-  
       })
       .then(responseJson => {
-        console.log("resp.json " + responseJson.success);
+        console.log(responseJson.success)
         if(responseJson.success===false){
           setIsSignedIn(false)
           setIsLoading(false)
