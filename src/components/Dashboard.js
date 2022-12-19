@@ -28,7 +28,7 @@ export default function Dashboard(props){
        
        
        
-        fetch("https://sea-turtle-app-52yvl.ondigitalocean.app/notes/sos",
+        fetch("http://localhost:5000/notes/sos",
         {
             method: "POST",
             headers: {
@@ -62,7 +62,7 @@ export default function Dashboard(props){
     // When not signed in, show an option to sign in with google
     else if (props.isSignedIn===false) return (
         <div className='NotSignedInDashboard'>
-            <img className="bg-img" src={img1} alt="img"></img>
+            <img className="bg-img" src={img1}></img>
             <div className='Notes-Head'>
                 <img className='Notes-Logo' src={process.env.PUBLIC_URL + '/favicon.ico'} alt='Icon'/>
                 <div className='Notes-Head-Text'>SafeHer</div>
@@ -74,14 +74,14 @@ export default function Dashboard(props){
                 <div>The simplest way to keep you safe</div>
                 {/* <div></div> */}
             </div>
-            <div className="Google-Btn" onClick={()=>window.location.href='https://sea-turtle-app-52yvl.ondigitalocean.app/auth/google'}>
+            <div className="Google-Btn" onClick={()=>window.location.href='http://localhost:5000/auth/google'}>
                 <img className="Google-Icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='google'/>
                 <div className="Btn-Text">Sign in with Google</div>
             </div>
             <div className="sos">
-                <button onClick={()=>{
+                <button><a onClick={()=>{
                     handleSos(lat,lon)
-                }}>SOS</button>
+                }}>SOS</a></button>
             </div>
            
         </div>
